@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    background-color: rgb(236, 104, 45);
+    position: fixed;
+    transition: top 0.3s;
+    width: 100%;
+}
+
+header.navbar {
+    width: 100%;
+    margin-inline: auto;
+    padding: 1rem 0rem;
+
+    display: flex;
+    justify-content: space-around;
+    z-index: 999;
+
+    top: 0;
+
+}
+
+header img {
+    width: 170px;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+}
+
+header .nav-list ul {
+    display: flex;
+    justify-content: end;
+    gap: 2rem;
+    padding: 0;
+}
+
+header .nav-list li {
+    list-style-type: none;
+}
+
+.nav_link {
+    color: rgb(222, 222, 222);
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+.nav_link_active {
+    color: rgb(255, 255, 255);
+}
+
+.nav_link::after {
+    content: '';
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -12px;
+    transition: all 0.2s;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.nav_link:hover::after {
+    opacity: 1;
+}
+
+
+section {
+    position: relative;
+    background-image: url('img/banner-img.jpg');
+    width: 100%;
+    height: 70vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+}
+
+section::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.55);
+    z-index: -2;
+}
+
+section::before {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background-color: #fff;
+    clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+}
+
+section .content {
+    color: white;
+    text-align: center;
+
+    position: relative;
+    max-width: 900px;
+}
+
+section .content h1 {
+    font-size: 60px;
+}
+
+main {
+    background-color: #fff;
+    height: 100vh;
+}
+
+main .container {
+    padding: 3rem 10rem;
+}
+
+.container .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container .header .side-content {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.side-content .content {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.selector {
+    width: 100px;
+}
+
+.select-field {
+    width: 100%;
+    padding: 8px 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: 1px solid grey;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.list {
+    width: 100px;
+    margin-top: 5px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid grey;
+    position: absolute;
+}
+
+.optionsPage,
+.optionSort {
+    width: 100%;
+    padding: 1rem 0.9rem;
+    list-style: none;
+    cursor: pointer;
+    background-color: white;
+    box-sizing: border-box;
+}
+
+.optionsPage:hover,
+.optionSort:hover {
+    background: grey;
+}
+
+.hide {
+    visibility: hidden;
+}
+
+.container .card-content {
+    margin: 1.1rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 35px 20px;
+}
+
+.card {
+    height: 330px;
+    width: 280px;
+    border-radius: 20px;
+
+    box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.21);
+    -webkit-box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.21);
+    -moz-box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.21);
+
+}
+
+.card .card-img {
+    height: 65%;
+    object-fit: contain;
+
+}
+
+.card .card-img img {
+    border-radius: 20px 20px 0 0;
+    width: 100%;
+    height: 100%;
+}
+
+.card .card-info {
+    height: 35%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    box-shadow: 0px 4px 17px -7px rgba(0,0,0,0.39) inset;
+    -webkit-box-shadow: 0px 4px 17px -7px rgba(0,0,0,0.39) inset;
+    -moz-box-shadow: 0px 4px 17px -7px rgba(0,0,0,0.39) inset;
+    border-radius: 0 0 20px 20px;
+}
+
+.card-info p {
+    font-size: 0.8rem;
+}
+
+.card-text {
+    font-size: 1rem;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.pagination {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.pagination-btn {
+    padding: 0.7rem;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+
+    color: white;
+    background-color: orangered;
+
+}
+
+.pagination li {
+    list-style: none;
+}
+
+button.paginationBtn {
+    background-color: white;
+    border: none;
+}
+
+@media screen and (max-width: 1200px) {
+    main .container {
+        padding: 3rem;
+    }
+
+    section::before {
+        content: '';
+        height: 20%;
+    }
+
+    .container .header {
+        padding: 0 6rem;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .container .card-content {
+        justify-content: center;
+    }
+
+}
+
+@media screen and (max-width: 880px) {
+    main .container {
+        padding: 1rem;
+    }
+
+    .container .header {
+        padding: 0;
+    }
+
+}
+
+@media screen and (max-width: 650px) {
+    header.navbar {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .container .header {
+        flex-direction: column;
+    }
+}

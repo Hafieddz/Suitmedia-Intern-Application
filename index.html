@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Suitmedia Test Project </title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/75f28d3810.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="navbar" id="header">
+        <a href="#home">
+            <div class="logo">
+                <img src="img/logo-test.png" alt="Logo">
+            </div>
+        </a>
+        <nav class="nav-list">
+            <ul>
+                <li> <a class="nav_link" href="/index.html"> Home </a></li>
+                <li> <a class="nav_link" href="/work.html"> Work </a></li>
+                <li> <a class="nav_link" href="/about.html"> About </a></li>
+                <li> <a class="nav_link" href="/ideas.html"> Ideas </a></li>
+                <li> <a class="nav_link" href="/careers.html"> Careers </a></li>
+                <li> <a class="nav_link" href="/contact.html"> Contact </a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <div class="content">
+            <h1> Ideas </h1>
+            <h2> Where all our great things begin </h2>
+        </div>
+    </section>
+
+    <main>
+        <div class="container">
+            <!-- Main Header -->
+            <div class="header">
+                <h4 id="list-show"> Showing 1 - 10 of 100 </h4>
+                <div class="side-content">
+                    <div class="content">
+                        <h4> Show Per Page : </h4>
+                        <div class="selector">
+                            <div id="select-field-page" class="select-field">
+                                <p id="select-text-page"> </p>
+                                <i class="fa-solid fa-caret-down fa-lg" style="color: #3b3d3f;"></i>
+                            </div>
+                            <span>
+                                <ul id="show-page" class="list hide">
+                                    <li class="optionsPage">
+                                        <p> 10 </p>
+                                    </li>
+                                    <li class="optionsPage">
+                                        <p> 20 </p>
+                                    </li>
+                                    <li class="optionsPage">
+                                        <p> 50 </p>
+                                    </li>
+                                </ul>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="content">
+                        <h4> Sort By : </h4>
+                        <div class="selector">
+                            <div id="select-field-sort" class="select-field">
+                                <p id="select-text-sort"> Newest </p>
+                                <i class="fa-solid fa-caret-down fa-lg" style="color: #3b3d3f;"></i>
+                            </div>
+                            <span>
+                                <ul id="show-sort" class="list hide">
+                                    <li class="optionSort">
+                                        <p> Newest </p>
+                                    </li>
+                                    <li class="optionSort">
+                                        <p> Latest </p>
+                                    </li>
+                                </ul>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-content" id="card-content"> </div>
+            <div class="pagenumbers pagination" id="pagination">
+                <button class="paginationBtn" id="prevBtn"> <i class="fa-solid fa-chevron-left " style="color: #000000;"> </i> </button>
+                <span class="pagination-btn" id="currentPage">1</span>
+                <button class="paginationBtn"  id="nextBtn"> <i class="fa-solid fa-angle-right " style="color: #000000;"></i> </button>
+            </div>
+    </main>
+
+    <script src="script.js"> </script>
+</body>
+
+</html>
